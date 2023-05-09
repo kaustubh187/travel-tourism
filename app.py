@@ -1,5 +1,5 @@
 from flask import Flask,flash,render_template,request,g, session, redirect, url_for
-from flask_sqlalchemy import SQLAlchemy,event
+from flask_sqlalchemy import SQLAlchemy
 from forms import  LoginForm, RegistrationForm
 #from flask_mail import Mail
 import json, os, math
@@ -33,11 +33,11 @@ login_manager.login_view='login'
 
 
 
-@event.listens_for(Engine,"connect")
-def set_sqlite_pragma(dbapi_connection, connection_record):
-  cursor=dbapi_connection.cursor()
-  cursor.execute("PRAGMA foreign_keys=ON")
-  cursor.close()
+# @event.listens_for(Engine,"connect")
+# def set_sqlite_pragma(dbapi_connection, connection_record):
+#   cursor=dbapi_connection.cursor()
+#   cursor.execute("PRAGMA foreign_keys=ON")
+#   cursor.close()
 
 
 
@@ -806,5 +806,5 @@ def editT(id):
 
 
 if __name__=="__main__":
-    app.run(debug=True)
+    app.run(host='0.0.0.0',port=8080,debug=True)
     
