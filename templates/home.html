@@ -34,8 +34,8 @@
             <h1><center>Travel and Tourism</center></h1>
           </div>
          
-          <button onclick="document.location='{{ url_for('login') }}'" style="width:auto;float: right;" class="btn  btn-success navbar-btn navbar-right"> Login</button>
-          <button onclick="document.location='{{ url_for('signup') }}'" style="width:auto;float: right;" class="btn  btn-primary navbar-btn navbar-right"> SignUp </button>
+          <button onclick="document.location='{{ url_for('login') }}'" style="width:auto;float: right;border-radius: 11px;" class="btn  btn-success navbar-btn navbar-right"> Login</button>
+          <button onclick="document.location='{{ url_for('signup') }}'" style="width:auto;float: right;margin-right: 1.5em;border-radius: 11px;" class="btn  btn-primary navbar-btn navbar-right"> SignUp </button>
         </div>
       </div>
       </div>  
@@ -43,37 +43,36 @@
   </header>
 
   
-  <section  class="container-fluid" >
-  	<h1 style="font-family:verdana;"><center><strong>WELCOME</strong></center></h1><br>
-  	<h1 style="font-family:verdana;"><center><strong>TO WANDERSTRUCK TRAVELS</strong></center></h1>
-  	<p><center><strong>We aim to bring our clients the best in value and quality travel arrangements.</strong></center></p><center><p><strong>We are passionate about providing travelers packages to enjoy their travel and other necessary services to facilitate their travel needs.</strong></center></p>
-  </section>
+  <section  class="container-fluid" style="background-color: rgba(237, 195, 233, 0.038);">
+  	<h1 style="font-family:'Trebuchet MS';color: rgb(118, 123, 128);"><center><strong>WELCOME</strong></center></h1><br>
+  	<h1 style="font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;"><center><strong>TO WANDERSTRUCK TRAVELS</strong></center></h1>
+  	 </section>
   
   <section  class="work">
       <div class="container text-center">
 
         <div class="section-title" data-aos="fade-up">
-          <h2><strong>How It Works</strong></h2>
+         
           
         
           <div class="row ">
             <div class="col-md-4">
-              <center><img src="{{ url_for('static', filename='images/account.jpg')}}" class="img-responsive " style="width:50%" alt="Image"></center>
-              <p><h4><b>Create an Account</b></h4></p>
+              <center><img src="{{ url_for('static', filename='images/signup.png')}}" class="img-responsive " style="width:50%" alt="Image"></center>
+              <p><h4 style="color: aliceblue;"><b>Create an Account</b></h4></p>
             </div>
             <div class="col-md-4"> 
-              <center><img src="{{ url_for('static', filename='images/booking.jpg')}}" class="img-responsive" style="width:50%" alt="Image"></center>
-              <p><h4><b>Start Booking</b></h4></p>    
+              <center><img src="{{ url_for('static', filename='images/booking.png')}}" class="img-responsive" style="width:50%" alt="Image"></center>
+              <p><h4 style="color: aliceblue;"><b>Start Booking</b></h4></p>    
             </div>
             <div class="col-md-4">
-              <center><img src="{{ url_for('static', filename='images/travel.jpg')}}" class="img-responsive " style="width:50%" alt="Image"></center>
-              <p><h4><b>Travel Your Dream Place</b></h4></p> 
+              <center><img src="{{ url_for('static', filename='images/travel.png')}}" class="img-responsive " style="width:50%" alt="Image"></center>
+              <p><h4 style="color: aliceblue;"><b>Travel Your Dream Place</b></h4></p> 
             </div>
           </div>
         </div>
     </div>
   </section>
-<h3>  <p>We would <i class="fa fa-heart" style="font-size:18px;color:red"></i> <a href="/feedback" style="color: #0000FF;">Your Suggestions/Feedback</a></p></h3>
+<h3>  
 {% endblock %}
 
 
